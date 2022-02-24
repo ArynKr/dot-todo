@@ -18,11 +18,13 @@ function AppHeader() {
 
 	return (
 		<div className={styles.appHeader}>
-			<div onClick={toggleModal}>
-				<Button variant='primary' type='button'>
-					Add Task
-				</Button>
-			</div>
+			<Button
+				variant='primary'
+				type='button'
+				onClickHandler={toggleModal}
+			>
+				Add Task
+			</Button>
 			<SelectButton>
 				<option value='all'>All</option>
 				<option value='incomplete'>Incomplete</option>

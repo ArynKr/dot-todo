@@ -1,7 +1,12 @@
 import styles from '../styles/modules/button.module.scss';
 import { getClasses } from '../utils/getClasses';
 
-const Button = ({ children, type, variant = 'primary' }) => {
+const Button = ({
+	children,
+	type,
+	variant = 'primary',
+	onClickHandler,
+}) => {
 	return (
 		<button
 			type={type}
@@ -9,6 +14,7 @@ const Button = ({ children, type, variant = 'primary' }) => {
 				styles.button,
 				styles[`button--${variant}`],
 			])}
+			onClick={onClickHandler}
 		>
 			{children}
 		</button>

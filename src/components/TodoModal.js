@@ -9,6 +9,8 @@ const TodoModal = ({ closeModal }) => {
 
 	function handleSubmit(e) {
 		e.preventDefault();
+		console.log({ title, status });
+		closeModal();
 	}
 
 	return (
@@ -52,16 +54,16 @@ const TodoModal = ({ closeModal }) => {
 						</select>
 					</label>
 					<div className={styles.buttonContainer}>
-						<div onClick={closeModal}>
-							<Button type='submit' variant='primary'>
-								Add Task
-							</Button>
-						</div>
-						<div onClick={closeModal}>
-							<Button type='button' variant='secondary'>
-								Cancel
-							</Button>
-						</div>
+						<Button type='submit' variant='primary'>
+							Add Task
+						</Button>
+						<Button
+							type='button'
+							variant='secondary'
+							onClickHandler={closeModal}
+						>
+							Cancel
+						</Button>
 					</div>
 				</form>
 			</div>
