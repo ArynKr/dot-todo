@@ -1,3 +1,3 @@
 # DOT TODO
 
-## Productive Todo App made using React & Redux.
+## A Productive Todo App made using React & Redux.
